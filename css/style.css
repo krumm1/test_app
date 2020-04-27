@@ -1,0 +1,87 @@
+* { box-sizing: border-box; }
+body {margin: 0 0 85px; font-family: Arial, Helvetica, sans-serif; background-color: #E5E5E5;}
+.app-header-top {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger {
+    display: block;
+    width: 40px;
+    height: 22px;
+    position: relative;
+}
+.hamburger::before, .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.hamburger::before {top: 0}
+.hamburger::after {bottom: 0}
+.hamburger-inner {
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+}
+.search-input {display: none;}
+.search.active {flex: 1 0 100%;display: flex;}
+.search.active .search-input {display: block;flex-basis: 100%;}
+
+.app-cats {overflow-x: auto; padding: 10px 0}
+.app-cats-row {display: flex; padding: 10px 0; border-bottom: 1px solid #fff}
+.app-cats-row:last-child {border-bottom: none}
+.app-cats-item {
+    background-color: #fff;
+    font-size: 12px;
+    color: #7B7B7B;
+    border-radius: 60px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    flex: 0 0 auto;
+    margin-right: 6px;
+}
+.app-cats-item.active {color: #fff; background-color: #8BC34A}
+.app-cats-item:last-child {margin-right: 0}
+
+.app-slider-wrapper {margin: 0 15px;}
+.app-slider-item {
+    background: gray;
+    height: 160px;
+    width: 280px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.app-footer {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.app-footer-btn {text-align: center; font-size: 12px; position: relative;}
+.app-footer-btn .badge {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    background: #8BC34A;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
